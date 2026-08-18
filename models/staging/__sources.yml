@@ -3,8 +3,8 @@ version: 2
 # Try using these source definitions instead!
 sources:
   - name: ecom
-    schema: prod_analytics_raw
-    database: analytics
+    schema: accelerating_fusion
+    database: raw
     description: E-commerce data for the Jaffle Shop
     tables:
       - name: raw_customers
