@@ -1,24 +1,19 @@
 version: 2
 
-# Try using these source definitions instead!
 sources:
-  - name: ecom
-    schema: accelerating_fusion
+  - name: jaffle_shop
     database: raw
-    description: E-commerce data for the Jaffle Shop
+    schema: jaffle_shop
+    description: E-commerce data
     tables:
-      - name: raw_customers
+      - name: customers
         description: One record per person who has purchased one or more items
-      - name: raw_orders
+      - name: orders
         description: One record per order (consisting of one or more order items)
-        config:
-          loaded_at_field: ordered_at
-      - name: raw_items
+      - name: items
         description: Items included in an order
-      - name: raw_stores
-        config:
-          loaded_at_field: opened_at
-      - name: raw_products
+      - name: stores
+      - name: products
         description: One record per SKU for items sold in stores
-      - name: raw_supplies
+      - name: supplies
         description: One record per supply per SKU of items sold in stores
