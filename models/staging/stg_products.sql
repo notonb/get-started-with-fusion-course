@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('ecom', 'raw_products') }}
+    select * from {{ source('jaffle_shop', 'products') }}
 
 ),
 
@@ -20,7 +20,7 @@ renamed as (
 
 
         ---------- numerics
-        {{ cents_to_dollars('price') }} as product_price,
+        (price / 100.0) as product_price,
 
         ---------- booleans
         coalesce(type = 'jaffle', false) as is_food_item,

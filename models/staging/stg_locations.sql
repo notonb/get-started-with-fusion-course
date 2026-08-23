@@ -2,8 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('ecom', 'raw_stores') }}
-
+    select * from {{ source('jaffle_shop', 'stores') }}
 ),
 
 renamed as (
@@ -20,7 +19,7 @@ renamed as (
         tax_rate,
 
         ---------- timestamps
-        cast(opened_at as date) as opened_date
+        opened_at as location_opened_at
 
     from source
 
