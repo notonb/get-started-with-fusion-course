@@ -17,7 +17,7 @@ models:
         tests:
           - dbt_utils.expression_is_true:
               arguments:
-                expression:"<=5"
+                expression:"<0"
               config:
                 error_if: ">=10"
       - name: tax_paid
