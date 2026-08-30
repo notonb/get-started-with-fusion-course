@@ -19,6 +19,7 @@ renamed as (
         (order_total / 100.0) as order_total,
         (tax_paid / 100.0) as tax_paid,
         (order_total - tax_paid)/100 as subtotal,
+        order_total as order_price,
         ---------- timestamps
         {{ dbt.date_trunc('day','ordered_at') }} as ordered_at
 
