@@ -17,9 +17,9 @@ models:
         tests:
           - dbt_utils.expression_is_true:
               arguments:
-                expression:"<0"
-              config:
-                error_if: ">=10"
+                expression: ">=0"
+#              config:
+#                error_if: ">=10"
       - name: tax_paid
         data_type: number
       - name: ordered_at
